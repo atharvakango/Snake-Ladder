@@ -30,6 +30,9 @@ public class BoardGame {
         while(!reachedEnd) {
             
             for(User user: this.userList) {
+
+                if(user.isWon())
+                    continue;
                 
                 int randomInt = getRandomNumber(1, 7);
 
@@ -64,9 +67,9 @@ public class BoardGame {
                     winner = user;
                     System.out.println(winner.getName() + " Wins the game");
                     winnerList.add(winner);
-                    this.userList.remove(winner);
+                    user.setWon(true);
 
-                    if(userList.size() <= 1) {
+                    if( this.userList.size() - winnerList.size() <= 1) {
                         reachedEnd = true;
                         break;
                     }

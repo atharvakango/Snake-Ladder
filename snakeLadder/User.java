@@ -4,8 +4,15 @@ public class User {
     private String name;
     private String id;
     private int currLoc=0;
+    private boolean won;
 
 
+    public boolean isWon() {
+        return won;
+    }
+    public void setWon(boolean hasWon) {
+        this.won = hasWon;
+    }
     public int getcurrLoc() {
         return currLoc;
     }
