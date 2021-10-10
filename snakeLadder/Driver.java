@@ -21,6 +21,7 @@ public class Driver {
             ladderMap.put( Integer.parseInt( inp[0] ), Integer.parseInt( inp[1] ) );
         }
         
+        // Passing 100 for now, can be taken dynamically as well
         BoardGame boardGame = new BoardGame( new Board(snakeMap, ladderMap, 100) );
 
         int userCount = Integer.parseInt(scanner.nextLine()) ;

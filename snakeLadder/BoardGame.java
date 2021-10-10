@@ -36,7 +36,9 @@ public class BoardGame {
                 
                 int randomInt = getRandomNumber(1, 7);
 
-                
+                // If randomInt == 6, include everything below in a function
+                // And implement the logic accordingly
+
                 int src = user.getcurrLoc();
                 int dest = user.getcurrLoc() + randomInt;
 
@@ -58,10 +60,10 @@ public class BoardGame {
                     dest = this.board.ladder.get(dest);
                 }
                 
-
                 user.setcurrLoc(dest);
                 System.out.println(" to " + dest);
 
+                // Until here
 
                 if(user.getcurrLoc() == this.board.size) {
                     winner = user;
